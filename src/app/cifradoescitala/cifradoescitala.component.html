@@ -1,25 +1,24 @@
 <div class="escitala-container">
-    <div class="escitala-card">
-      <h3>Cifrado Escítala</h3>
-      <div class="p-field">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" [(ngModel)]="mensaje" rows="5" cols="65" placeholder="Introduce el mensaje a cifrar o descifrar"></textarea>
-      </div>
-  
-      <div class="p-field">
-        <label for="clave">Número de columnas (clave)</label>
-        <input id="clave" type="number" [(ngModel)]="clave" min="1" max="25" />
-      </div>
-  
-      <div class="button-container">
-        <button class="p-button-primary" (click)="cifrarMensaje()">Cifrar</button>
-        <button class="p-button-secondary" (click)="descifrarMensaje()">Descifrar</button>
-        <button class="p-button-secondary" (click)="copiarResultado()">Copiar Resultado</button>
-      </div>
-  
-      <p class="resultado" *ngIf="resultado">
-        Resultado: {{ resultado }}
-      </p>
+  <div class="escitala-card">
+    <h3>Cifrado Escítala</h3>
+    <div class="p-field">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" [(ngModel)]="mensaje" rows="5" cols="65" placeholder="Introduce el mensaje a cifrar o descifrar"></textarea>
     </div>
+
+    <div class="p-field">
+      <label for="clave">Número de columnas (clave)</label>
+      <input id="clave" type="number" [(ngModel)]="clave" min="1" max="25" />
+    </div>
+
+    <div class="button-container">
+      <button class="p-button-primary" (click)="cifrarMensaje()">Cifrar</button>
+      <button class="p-button-secondary" (click)="descifrarMensaje()">Descifrar</button>
+      <button class="p-button-secondary" (click)="copiarResultado()">Copiar Resultado</button>
+    </div>
+
+    <p class="resultado" *ngIf="resultado">
+      Resultado: {{ resultado }}
+    </p>
   </div>
-  
+</div>

@@ -1,34 +1,62 @@
+/* Estilos generales */
+.hash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+.hash-card {
+  background-color: #fff; /* Fondo blanco para la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px; /* Espaciado interno */
+  width: 90%; /* Ocupa el 90% del ancho */
+  max-width: 600px; /* Ancho máximo */
+  text-align: center; /* Centra el texto */
+}
+
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+input[type="text"] {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espacio inferior */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+button {
+  padding: 10px 15px; /* Espaciado interno */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+.hash-result {
+  margin-top: 20px; /* Espacio superior */
+  color: #333; /* Color del texto */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .hash-card {
+      padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
   }
   
-  input {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  input[type="text"] {
+      font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  h2 {
-    margin-top: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    color: #333;
-  }
-  
+}

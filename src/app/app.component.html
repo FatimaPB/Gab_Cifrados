@@ -1,21 +1,29 @@
 <header class="header">
-  <div class="logo">Cifrados</div>
-  <nav class="navbar">
-    <ul>
-      <li><a routerLink="/">Inicio</a></li>
-      <li>
-        <a>Cifrados</a>
-        <ul>
-          <li><a routerLink="/cifrados/cesar">Cifrado César</a></li>
-          <li><a routerLink="/cifrados/escitala">Cifrado Escítala</a></li>
-          <li><a routerLink="/cifrados/idea">Cifrado IDEA</a></li>
-          <li><a routerLink="/cifrados/mqv">MQV</a></li>
-          <li><a routerLink="/cifrados/blake3">Blake3 Hash</a></li>
-        </ul>
-      </li>
-      <li><a routerLink="/guia">Guía</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <div class="logo">Cifrados</div>
+    <!-- Botón de menú (visible solo en pantallas pequeñas) -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+      <ul [ngClass]="{'show': isMenuOpen}">
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/cifrados/cesar">Cifrado César</a></li>
+        <li><a routerLink="/cifrados/escitala">Cifrado Escítala</a></li>
+        <li><a routerLink="/cifrados/idea">Cifrado IDEA</a></li>
+        <li><a routerLink="/cifrados/mqv">MQV</a></li>
+        <li><a routerLink="/cifrados/blake3">Blake3 Hash</a></li>
+        <li><a routerLink="/guia">Guía</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+<router-outlet></router-outlet>
+
+
+
 
 <router-outlet></router-outlet>

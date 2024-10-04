@@ -1,66 +1,119 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .escitala-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+.escitala-card {
+  background-color: #fff; /* Fondo blanco para la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px; /* Espaciado interno */
+  width: 90%; /* Ocupa el 90% del ancho */
+  max-width: 600px; /* Ancho máximo */
+}
+
+h3 {
+  text-align: center; /* Centra el título */
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para grupos de entrada */
+.p-field {
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+label {
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  margin-bottom: 5px; /* Espacio inferior */
+  color: #555; /* Color de texto de la etiqueta */
+}
+
+textarea {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde ligero */
+  border-radius: 4px; /* Bordes redondeados */
+  resize: vertical; /* Permite cambiar el tamaño verticalmente */
+}
+
+input[type="number"] {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde ligero */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.button-container {
+  display: flex; /* Flexbox para alinear los botones */
+  justify-content: space-between; /* Espacio entre los botones */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.p-button-primary {
+  flex: 1; /* Cada botón ocupa el mismo espacio */
+  margin: 0 5px; /* Espacio lateral entre botones */
+  padding: 10px; /* Espaciado interno */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+}
+
+.p-button-primary:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+.p-button-secondary {
+  flex: 1; /* Cada botón ocupa el mismo espacio */
+  margin: 0 5px; /* Espacio lateral entre botones */
+  padding: 10px; /* Espaciado interno */
+  background-color: #6c757d; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+}
+
+.p-button-secondary:hover {
+  background-color: #5a6268; /* Color más oscuro al pasar el cursor */
+}
+
+.resultado {
+  margin-top: 20px; /* Espacio superior */
+  text-align: center; /* Centra el texto */
+}
+
+.resultado h3 {
+  color: #333; /* Color del texto */
+}
+
+.resultado p {
+  margin-top: 10px; /* Espacio superior */
+  color: #555; /* Color del texto */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
   .escitala-card {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
   }
-  
-  .p-field {
-    margin-bottom: 20px;
-  }
-  
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .p-button-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+
+  .p-button-primary,
   .p-button-secondary {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin: 0 2px; /* Reduce el espacio entre botones */
   }
-  
-  .p-button-primary:hover,
-  .p-button-secondary:hover {
-    opacity: 0.9;
-  }
-  
-  .resultado {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
+}

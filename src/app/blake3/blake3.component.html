@@ -1,15 +1,16 @@
-<div>
-    <h1>Generador de Hash Blake3</h1>
-    <input
-      type="text"
-      [value]="input"
-      (input)="handleInputChange($event)"
-      placeholder="Ingresa tu texto aquí"
-    />
-    <button (click)="calculateHash()">Generar Hash</button>
-    <div *ngIf="hash">
-      <h2>Resultado del Hash:</h2>
-      <p>{{ hash }}</p>
-    </div>
+<div class="hash-container">
+  <div class="hash-card">
+      <h1>Generador de Hash Blake3</h1>
+      <input
+          type="text"
+          [value]="input"
+          (input)="handleInputChange($event)"
+          placeholder="Ingresa tu texto aquí"
+      />
+      <button (click)="calculateHash()">Generar Hash</button>
+      <div *ngIf="hash" class="hash-result">
+          <h2>Resultado del Hash:</h2>
+          <p>{{ hash }}</p>
+      </div>
   </div>
-  
+</div>

@@ -1,38 +1,75 @@
+/* Estilos generales */
 .guia-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura al 100% de la ventana */
-    background-color: #f9f9f9; /* Color de fondo */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    background-color: #f0f0f0; /* Color de fondo claro */
 }
 
 .guia-card {
-    background-color: white; /* Fondo blanco para el card */
+    background-color: #fff; /* Fondo blanco para la tarjeta */
     border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     padding: 20px; /* Espaciado interno */
-    width: 90%; /* Ancho del card */
+    width: 90%; /* Ocupa el 90% del ancho */
     max-width: 600px; /* Ancho máximo */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+h3, h4 {
+    color: #333; /* Color del texto */
 }
 
 h3 {
-    margin-bottom: 10px; /* Espaciado debajo del encabezado */
+    margin-bottom: 15px; /* Espacio inferior para encabezados */
 }
 
-p, ol {
-    margin: 10px 0; /* Espaciado para párrafos y listas */
+h4 {
+    margin-top: 15px; /* Espacio superior para subencabezados */
+    margin-bottom: 10px; /* Espacio inferior para subencabezados */
+}
+
+p {
+    margin-bottom: 15px; /* Espacio inferior para párrafos */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+ol {
+    margin-left: 20px; /* Indentación para listas ordenadas */
+    margin-bottom: 15px; /* Espacio inferior para listas */
 }
 
 .button {
-    background-color: #007bff; /* Color del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
     padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+    display: inline-block; /* Permite que el botón tenga margen */
 }
 
 .button:hover {
-    background-color: #0056b3; /* Color al pasar el mouse */
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .guia-card {
+        padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
+    }
+    
+    h3, h4 {
+        font-size: 18px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+    
+    p {
+        font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+    
+    .button {
+        padding: 8px 12px; /* Reduce el espaciado en el botón para pantallas pequeñas */
+    }
 }
