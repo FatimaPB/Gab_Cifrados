@@ -8,6 +8,7 @@
 .header {
   background-color: #333;
   padding: 20px;
+  position: relative; /* Permite posicionar el botón dentro del header */
 }
 
 .container {
@@ -28,7 +29,7 @@
 
 /* Ocultar el botón de menú en pantallas grandes */
 .menu-toggle {
-  display: none;
+  display: none; /* Se oculta en pantallas grandes */
 }
 
 /* Estilos del menú de navegación para pantallas grandes */
@@ -56,7 +57,6 @@
   background-color: #f1f1f1; /* Color de fondo del footer */
   padding: 20px 0; /* Espaciado interno */
   text-align: center; /* Centra el texto */
-  position: relative; /* Para posicionar elementos si es necesario */
 }
 
 .footer p {
@@ -78,9 +78,9 @@
     display: none; /* Oculta el menú por defecto */
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Ajusta según el tamaño del header */
-    left: 8px; /* Ajusta el margen izquierdo para centrar el menú */
-    right: 8px; /* Ajusta el margen derecho para centrar el menú */
+    top: 60px; /* Ajusta según el tamaño del header */
+    left:0; /* Ajusta el margen izquierdo para centrar el menú */
+    right:0px; /* Ajusta el margen derecho para centrar el menú */
     background-color: #333;
     z-index: 1; /* Asegura que el menú esté encima de otros elementos */
     padding: 10px 0; /* Añade un poco de espaciado interno */
@@ -104,15 +104,18 @@
 
   /* Mostrar el botón de menú (hamburguesa) en pantallas pequeñas */
   .menu-toggle {
-    display: flex;
-    flex-direction:initial;
+    display: flex; /* Muestra el botón en pantallas pequeñas */
+    flex-direction: column; /* Cambia la dirección a columna */
     cursor: pointer;
+    position: absolute; /* Permite posicionar el botón */
+    top: 14px; /* Ajusta según el tamaño del header */
+    right: 20px; /* Pegado a la derecha */
   }
 
   .menu-toggle span {
-    background-color: #fff;
-    height: 3px;
-    margin: 5px 0;
-    width: 25px;
+    background-color: #fff; /* Color de las rayitas */
+    height: 3px; /* Altura de las rayitas */
+    margin: 5px 0; /* Espaciado vertical entre las rayitas */
+    width: 25px; /* Ancho de las rayitas */
   }
 }
