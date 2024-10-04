@@ -1,0 +1,11 @@
+<div>
+    <h2>Ejemplo del Protocolo MQV</h2>
+    <button (click)="manejarGenerarClaves()">Generar Par de Claves y Calcular Clave Compartida</button>
+    <div *ngIf="claveCompartida">
+        Clave Compartida: {{ claveCompartida }}
+    </div>
+    <div>
+        <h3>Clave Privada A: {{ clavePrivadaA }}</h3>
+        <h3>Clave Privada B: {{ clavePrivadaB }}</h3>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.header {
+    background-color: #007bff; /* Fondo azul */
+    color: white;              /* Texto blanco */
+    padding: 15px 20px;        /* Espaciado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0056b3;
+    padding: 10px;
+  }
+  
+  .navbar li:hover ul {
+    display: block;
+  }
+  
+  .navbar ul ul li {
+    margin-right: 0;
+  }

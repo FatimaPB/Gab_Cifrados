@@ -1,0 +1,38 @@
+<div class="idea-container">
+    <div class="idea-card">
+      <h2>Cifrado IDEA</h2>
+      
+      <div class="input-group">
+        <label for="texto">Introduce Texto</label>
+        <textarea
+          id="texto"
+          [(ngModel)]="texto" 
+          rows="4"
+          placeholder="Escribe el mensaje a cifrar o descifrar"
+        ></textarea>
+      </div>
+  
+      <div class="input-group">
+        <label for="clave">Clave (128 bits - 16 caracteres)</label>
+        <input
+          id="clave"
+          type="text"
+          [(ngModel)]="clave" 
+          maxlength="16" 
+          placeholder="Introduce una clave de 16 caracteres"
+        />
+      </div>
+  
+      <div class="button-group">
+        <button (click)="handleCifrar()">Cifrar Texto</button>
+        <button (click)="handleDescifrar()">Descifrar Texto</button>
+        <button (click)="copiarResultado()">Copiar</button>
+      </div>
+  
+      <div class="resultado">
+        <h3>Texto Cifrado/Descifrado</h3>
+        <p>{{ resultado }}</p> <!-- Muestra el resultado -->
+      </div>
+    </div>
+  </div>
+  
