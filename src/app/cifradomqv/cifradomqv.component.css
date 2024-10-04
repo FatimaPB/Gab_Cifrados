@@ -15,6 +15,8 @@
     width: 90%; /* Ocupa el 90% del ancho */
     max-width: 600px; /* Ancho máximo */
     text-align: center; /* Centra el texto */
+    overflow: hidden; /* Asegura que el contenido no desborde */
+    word-wrap: break-word; /* Permite que las palabras se dividan y no se salgan de la tarjeta */
 }
 
 h2 {
@@ -40,6 +42,8 @@ button:hover {
 .clave-compartida {
     margin: 10px 0; /* Espacio superior e inferior */
     color: #333; /* Color del texto */
+    overflow-wrap: break-word; /* Permite que las palabras se dividan */
+    word-break: break-all; /* Rompe palabras largas en cualquier lugar si es necesario */
 }
 
 .clave-privadas {
@@ -54,5 +58,20 @@ button:hover {
 @media (max-width: 600px) {
     .mqv-card {
         padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
+        width: 95%; /* Ocupa el 95% del ancho en pantallas pequeñas */
+        max-width: 100%; /* Ancho máximo del 100% en pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa el 100% del ancho en pantallas pequeñas */
+        padding: 12px; /* Aumenta el espaciado interno del botón */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+
+    .clave-compartida, .clave-privadas h3 {
+        font-size: 1rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
     }
 }
