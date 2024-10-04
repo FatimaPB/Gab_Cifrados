@@ -48,15 +48,19 @@ button:hover {
 .hash-result {
   margin-top: 20px; /* Espacio superior */
   color: #333; /* Color del texto */
+  overflow-wrap: break-word; /* Permite que el texto largo se rompa */
+  word-wrap: break-word; /* Soporte para navegadores más antiguos */
+  word-break: break-all; /* Rompe palabras largas si es necesario */
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
 /* Responsividad */
 @media (max-width: 600px) {
   .hash-card {
-      padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
+    padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
   }
-  
+
   input[type="text"] {
-      font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
   }
 }

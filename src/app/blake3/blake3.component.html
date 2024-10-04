@@ -7,7 +7,7 @@
           (input)="handleInputChange($event)"
           placeholder="Ingresa tu texto aquí"
       />
-      <button (click)="calculateHash()">Generar Hash</button>
+      <button (click)="calculateHash()" [disabled]="!input">Generar Hash</button>
       <div *ngIf="hash" class="hash-result">
           <h2>Resultado del Hash:</h2>
           <p>{{ hash }}</p>
