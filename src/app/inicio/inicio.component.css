@@ -1,14 +1,60 @@
 .inicio-container {
-    text-align: center;
-    padding: 50px;
+  background: linear-gradient(135deg, #4A90E2, #9013FE); /* Gradiente de fondo */
+  color: white; /* Color de texto blanco */
+  padding: 60px 30px; /* Espaciado interno aumentado */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  max-width: 900px; /* Ancho máximo para el contenedor */
+  height: 400px; /* Altura fija para ocupar más espacio */
+  margin: 100px auto; /* Centrar el contenedor y margen superior */
+  text-align: center; /* Centrar texto */
+  transform: translateY(0); /* Para la animación inicial */
+  opacity: 0; /* Ocultar inicialmente para la animación */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+  display: flex; /* Para centrar contenido */
+  flex-direction: column; /* Alinear contenido en columna */
+  justify-content: center; /* Centrar verticalmente */
+}
+
+/* Añadir clase para activar animación */
+.inicio-container.show {
+  transform: translateY(-20px); /* Levantar ligeramente el contenedor */
+  opacity: 1; /* Mostrar el contenedor */
+}
+
+.inicio-container h1 {
+  font-size: 2.5rem; /* Tamaño de fuente grande para el encabezado */
+  margin-bottom: 20px; /* Espaciado inferior */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.inicio-container p {
+  font-size: 1.2rem; /* Tamaño de fuente para el párrafo */
+  line-height: 1.6; /* Espaciado entre líneas */
+  animation: fadeIn 0.5s ease; /* Efecto de aparición */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  h1 {
-    color: #007bff;
+  to {
+    opacity: 1;
   }
-  
-  p {
-    font-size: 1.2rem;
-    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .inicio-container {
+    padding: 30px; /* Menos espaciado en pantallas pequeñas */
   }
-  
+
+  .inicio-container h1 {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para el encabezado */
+  }
+
+  .inicio-container p {
+    font-size: 1rem; /* Tamaño de fuente más pequeño para el párrafo */
+  }
+}

@@ -10,20 +10,32 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
       <ul [ngClass]="{'show': isMenuOpen}">
-        <li><a routerLink="/">Inicio</a></li>
-        <li><a routerLink="/cifrados/cesar">Cifrado César</a></li>
-        <li><a routerLink="/cifrados/escitala">Cifrado Escítala</a></li>
-        <li><a routerLink="/cifrados/idea">Cifrado IDEA</a></li>
-        <li><a routerLink="/cifrados/mqv">MQV</a></li>
-        <li><a routerLink="/cifrados/blake3">Blake3 Hash</a></li>
-        <li><a routerLink="/guia">Guía</a></li>
+        <li><a routerLink="/" (click)="closeMenu()">Inicio</a></li>
+        <li><a routerLink="/guia" (click)="closeMenu()">Guía</a></li>
+        <li><a routerLink="/cifrados/cesar" (click)="closeMenu()">Cifrado César</a></li>
+        <li><a routerLink="/cifrados/escitala" (click)="closeMenu()">Cifrado Escítala</a></li>
+        <li><a routerLink="/cifrados/idea" (click)="closeMenu()">Cifrado IDEA</a></li>
+        <li><a routerLink="/cifrados/mqv" (click)="closeMenu()">MQV</a></li>
+        <li><a routerLink="/cifrados/blake3" (click)="closeMenu()">Blake3 Hash</a></li>
+        <li><a routerLink="/cifrados/compar" (click)="closeMenu()">Comparación Frameworks</a></li>
+        <li><a routerLink="/nuev" (click)="closeMenu()">?</a></li>
       </ul>
     </nav>
   </div>
 </header>
-<router-outlet></router-outlet>
 
 
 
 
 <router-outlet></router-outlet>
+
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 Cifrados. Todos los derechos reservados.</p>
+    <p>
+      <a>Gabriel Juarez</a> |
+      <a>7mo Cuatrimestre | Grupo "B"</a>
+    </p>
+  </div>
+</footer>

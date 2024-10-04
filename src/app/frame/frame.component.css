@@ -1,13 +1,13 @@
 /* Estilos generales */
-.guia-container {
+.cifrado-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh; /* Asegura que ocupe toda la altura de la ventana */
+    min-height: 120vh; /* Asegura que ocupe toda la altura de la ventana */
     background-color: #f0f0f0; /* Color de fondo claro */
 }
 
-.guia-card {
+.cifrado-card {
     background-color: #fff; /* Fondo blanco para la tarjeta */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
@@ -57,7 +57,7 @@ ol {
 
 /* Responsividad */
 @media (max-width: 600px) {
-    .guia-card {
+    .cifrado-card {
         padding: 15px; /* Reduce el espaciado en pantallas pequeñas */
     }
     

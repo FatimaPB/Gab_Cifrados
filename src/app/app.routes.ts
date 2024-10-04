@@ -6,6 +6,8 @@ import { GuiaComponent } from './guia/guia.component';
 import { CifradoideaComponent } from './cifradoidea/cifradoidea.component';
 import { Blake3Component } from './blake3/blake3.component';
 import { CifradomqvComponent } from './cifradomqv/cifradomqv.component';
+import { ComparacionframComponent } from './comparacionfram/comparacionfram.component';
+import { FrameComponent } from './frame/frame.component';
 
 
 export const routes: Routes = [
@@ -16,5 +18,7 @@ export const routes: Routes = [
   { path: 'cifrados/mqv', component: CifradomqvComponent }, // Ruta para Cifrado mqv
   { path: 'cifrados/blake3', component: Blake3Component }, // Ruta para Cifrado mqv
   { path: 'guia', component: GuiaComponent }, // Ruta para Cifrado escitala
+  { path: 'nuev', component: FrameComponent }, // Ruta para Cifrado escitala
+  { path: 'cifrados/compar', component: ComparacionframComponent }, // Ruta para Cifrado escitala
   // Otras rutas...
 ];

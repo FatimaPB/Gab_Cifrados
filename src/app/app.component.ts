@@ -21,6 +21,11 @@ export class AppComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Cambia el estado al hacer clic
   }
+
+   // Método para cerrar el menú
+   closeMenu() {
+    this.isMenuOpen = false;
+  }
   
 
   

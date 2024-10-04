@@ -37,6 +37,10 @@
   list-style: none;
 }
 
+.navbar ul li {
+  margin: 0 10px; /* Espacio lateral entre elementos */
+}
+
 .navbar ul li a {
   color: #fff;
   padding: 10px 15px;
@@ -48,6 +52,26 @@
   background-color: #555;
 }
 
+.footer {
+  background-color: #f1f1f1; /* Color de fondo del footer */
+  padding: 20px 0; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  position: relative; /* Para posicionar elementos si es necesario */
+}
+
+.footer p {
+  margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+.footer a {
+  color: #333; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
 /* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar ul {
@@ -55,20 +79,27 @@
     flex-direction: column;
     position: absolute;
     top: 70px; /* Ajusta según el tamaño del header */
-    left: 0;
-    width: 100%;
+    left: 8px; /* Ajusta el margen izquierdo para centrar el menú */
+    right: 8px; /* Ajusta el margen derecho para centrar el menú */
     background-color: #333;
     z-index: 1; /* Asegura que el menú esté encima de otros elementos */
+    padding: 10px 0; /* Añade un poco de espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
   }
 
   .navbar ul.show {
     display: flex; /* Muestra el menú cuando tiene la clase 'show' */
   }
 
+  .navbar ul li {
+    width: auto; /* Cambia a auto para que el ancho sea solo el necesario */
+    margin: 10px 0; /* Añade un margen vertical entre los elementos */
+  }
+
   .navbar ul li a {
-    padding: 15px;
+    padding: 15px; /* Espacio interno aumentado para mejorar la selección */
     text-align: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #444; /* Borde inferior para separación */
   }
 
   /* Mostrar el botón de menú (hamburguesa) en pantallas pequeñas */

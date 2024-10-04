@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
+
+  ngAfterViewInit() {
+    const container = document.querySelector('.inicio-container');
+    if (container) {
+      container.classList.add('show'); // Añadir clase para activar la animación
+    }
+  }
 
 }
